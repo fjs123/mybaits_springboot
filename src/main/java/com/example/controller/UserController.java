@@ -16,6 +16,7 @@ public class UserController {
 	@Autowired
 	private UserMapper userMapper;
 
+
 	@RequestMapping("/findAll")
 	public List<UserEntity> findAll() {
 

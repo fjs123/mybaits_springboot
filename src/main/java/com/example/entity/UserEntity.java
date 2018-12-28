@@ -10,14 +10,14 @@ public class UserEntity implements Serializable {
 	private Long id;
 	private String userName;
 	private String passWord;
-	private UserSexEnum userSex;
+	private String userSex;
 	private String nickName;
 
 	public UserEntity() {
 		super();
 	}
 
-	public UserEntity(String userName, String passWord, UserSexEnum userSex) {
+	public UserEntity(String userName, String passWord, String userSex) {
 		super();
 		this.passWord = passWord;
 		this.userName = userName;
@@ -48,11 +48,11 @@ public class UserEntity implements Serializable {
 		this.passWord = passWord;
 	}
 
-	public UserSexEnum getUserSex() {
+	public String getUserSex() {
 		return userSex;
 	}
 
-	public void setUserSex(UserSexEnum userSex) {
+	public void setUserSex(String userSex) {
 		this.userSex = userSex;
 	}
 
@@ -66,7 +66,7 @@ public class UserEntity implements Serializable {
 
 	@Override
 	public String toString() {
-		return "userName " + this.userName + ", pasword " + this.passWord + "sex " + userSex.name();
+		return "userName " + this.userName + ", pasword " + this.passWord + "sex " + userSex;
 	}
 
 }

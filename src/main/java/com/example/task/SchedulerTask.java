@@ -15,7 +15,7 @@ public class SchedulerTask {
 
 	@Scheduled(cron = "*/6 * * * * ?")
 	private void process() {
-		mailService.sendSimpleMail("1844967035@qq.com","我爱Java","端午,约么");
+		mailService.sendSimpleMail("894452301@qq.com","我爱Java","端午,约么");
 		System.out.println("this is scheduler task runing  " + (count++));
 	}
 

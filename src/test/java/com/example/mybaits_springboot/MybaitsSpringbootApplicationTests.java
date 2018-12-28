@@ -1,18 +1,16 @@
 package com.example.mybaits_springboot;
 
-import java.util.List;
-
-import org.junit.Assert;
+import com.example.MybaitsSpringbootApplication;
+import com.example.entity.UserEntity;
+import com.example.enums.UserSexEnum;
+import com.example.mapper.UserMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.example.MybaitsSpringbootApplication;
-import com.example.entity.UserEntity;
-import com.example.enums.UserSexEnum;
-import com.example.mapper.UserMapper;
+import java.util.List;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = MybaitsSpringbootApplication.class)
@@ -22,9 +20,9 @@ public class MybaitsSpringbootApplicationTests {
 	    private UserMapper UserMapper;    
 	    @Test
 	    public void testInsert() throws Exception {
-	        UserMapper.insert(new UserEntity("aa", "a123456", UserSexEnum.MAN));
-	        UserMapper.insert(new UserEntity("bb", "b123456", UserSexEnum.WOMAN));
-	        UserMapper.insert(new UserEntity("cc", "b123456", UserSexEnum.WOMAN));
+	        UserMapper.insert(new UserEntity("aa", "a123456", "man"));
+	        UserMapper.insert(new UserEntity("bb", "b123456", "woman"));
+	        UserMapper.insert(new UserEntity("cc", "b123456", "man"));
 
 	     //   Assert.assertEquals(3, UserMapper.getAll().size());
 	    }   

@@ -18,6 +18,6 @@ public class MailServiceTest {
 
 	@Test
     public void testSimpleMail() throws Exception {
-        mailService.sendSimpleMail("1844967035@qq.com","test simple mail"," hello this is simple mail");
+        mailService.sendSimpleMail("894452301@qq.com","test simple mail"," hello this is simple mail");
     }
 }
